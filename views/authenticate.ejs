@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-auth-compat.js"></script>
+    <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+           apiKey: "AIzaSyBNt3IK8cIJbbkMeWIYVsH1C7m1iQ5QLg4",
+           aauthDomain: "blogauthen.firebaseapp.com",
+           projectId: "blogauthen",
+           storageBucket: "blogauthen.appspot.com",
+           messagingSenderId: "846887906905",
+           appId: "1:846887906905:web:abe08731c427ddbd558b48"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        console.log(auth);
+
+        // Sign-In with Google
+           const provider = new firebase.auth.GoogleAuthProvider();
+           window.addEventListener('DOMContentLoaded',(event)=>{
+                
+                auth.signInWithPopup(provider).then((result) => {
+                    const credential = result.credential;
+                    const token = credential.accessToken;
+                    const user = result.user;
+                    console.log('User signed in:', user);
+                    // Add logic to redirect or update UI after sign-in
+                }).catch((error) => {
+                    const errorMessage = error.message;
+                    console.error('Error during sign-in:', errorMessage);
+                });
+        
+            });
+    </script>
+</body>
+</html>
+

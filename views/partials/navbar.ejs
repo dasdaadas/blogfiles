@@ -1,0 +1,73 @@
+
+    <nav>
+     <div class="navigation" >
+ 
+         <div class="navbarbox1">
+             <h1> My Portfolio</h1>
+         </div>
+ 
+         <div class="navbarbox2">
+            <ul>
+               <li class="nav-item">
+                 <a class="nav-links" href="/">Home</a>
+               </li>
+ 
+               <li class="nav-item">
+                 <a class="nav-links" href="/Collection">Collection</a>
+               </li>
+ 
+               <li class="nav-item">
+                 <a class="nav-links" href="/About">About</a>
+               </li>
+
+               <li>
+                 <a class="nav-links" id="modalOpen" href="#">Sign-In</a>
+               </li>
+
+    
+              
+
+               <li class="nav-item">
+                 <a class="nav-links"  href="/views/Blog-Application.ejs">Blog-Application</a>
+               </li>
+            </ul>
+         </div>
+      
+     </div>
+    </nav>
+     
+    <div class="overlay" id="overlay" style="display: none;"></div>
+    <div class="modalBox" >
+      <span class="closeButton">&times;</span>
+      <div>
+      
+      <div class="modalbuttonbox">
+          <a href="/authenticate" class="modalButton" id="signinBtn" >SignIn with Google</a>
+          <button class="modalButton" id="signoutBtn">SignOut</button>
+      </div>
+      </div>
+  </div>
+
+  <script>
+      let openModal = document.getElementById('modalOpen');
+        let overlay = document.getElementById('overlay');
+        let modalBox = document.querySelector('.modalBox');
+        let closeModal = document.querySelector('.closeButton');
+
+        openModal.addEventListener('click', (event) => {
+            event.preventDefault(); 
+            overlay.style.display = 'block';
+            modalBox.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            modalBox.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            modalBox.style.display = 'none';
+        });
+  </script>
+

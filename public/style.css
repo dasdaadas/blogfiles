@@ -1,0 +1,256 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    /* align-items: center; */
+    min-height: 100vh;
+    
+}
+
+
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #3e71be;
+
+}
+
+
+.navbarbox2 ul a{
+     text-decoration:none;
+}
+
+.navbarbox2 ul li{
+    list-style:none;
+    font-size:1.1em;
+    font-family: Arial, sans-serif;
+    
+}
+
+.navbarbox1 h1{
+    color:white;
+}
+
+.nav-links{
+    color:rgb(224, 223, 223);;
+}
+
+.navbarbox2 ul{
+    display:flex;
+    gap:6em;
+}
+
+
+/* form css */
+
+
+.form-box{
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 100px; /* Add margin to avoid overlapping */
+
+}
+
+.contact-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.contact-form div {
+    margin-bottom: 20px;
+}
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    background-color: #eef6ff;
+}
+
+
+
+
+/* modal css */
+
+.modalBox {
+    background: linear-gradient(to bottom, #979696, #bd9393); /* Gradient from light to dark grey */
+    width: 30%;
+    height: auto; /* Auto height to fit content */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; /* Increased padding for better spacing */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Subtle border */
+    z-index: 1100;
+}
+
+.modalh1 {
+    color: #333; /* Dark grey color */
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #0b5fb9; /* Professional blue background */
+    width: 100%; 
+    padding: 15px; /* Increased padding for better appearance */
+    border-radius: 5px;
+    color: white; /* White text for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.modalbuttonbox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased gap for better spacing */
+    width: 100%;
+    align-items: center;
+}
+
+.modalButton {
+    color: white;
+    width: 100%; /* Adjusted width */
+    padding: 12px; /* Adjusted padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0862c2; /* Professional blue background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.modalButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.closeButton {
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #333; /* Dark grey color for close button */
+    cursor: pointer;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Place it above the rest of the content */
+}
+
+#signinBtn{
+     text-decoration:none;
+}
+
+
+
+/* footer */
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Layout styles */
+footer .layout1, footer .layout2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+footer .layout3 {
+    margin-top: 20px;
+}
+
+/* Styling for social icons */
+footer .layout1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Styling for footer links */
+footer .layout2 a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+footer .layout2 a:hover, footer .layout1 a:hover {
+    color: #ff6347; /* Change to any hover color you prefer */
+}
+
+/* Styling for layout3 text */
+footer .layout3 p {
+    margin: 0;
+    font-size: 1rem;
+}

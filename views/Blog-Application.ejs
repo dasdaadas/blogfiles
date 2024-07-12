@@ -1,0 +1,29 @@
+
+<%- include("partials/header.ejs") %>
+
+<%- include("partials/navbar.ejs") %>
+
+
+<body>
+    <%- include("partials/navbar.ejs") %>
+    <div class="form-box">
+    <div class="contact-form">
+        <h1>Submit Your Blog Application</h1>
+        <div>
+            <label for="title">Blog Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter the blog title" required>
+        </div>
+        
+        <div>
+            <label for="description">Blog Description</label>
+            <textarea id="description" name="description" placeholder="Enter the blog description" required></textarea>
+        </div>
+        
+        <div>
+            <button type="submit">Submit Blog</button>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
